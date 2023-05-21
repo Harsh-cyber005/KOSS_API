@@ -1,0 +1,119 @@
+{% extends 'base.html' %}
+{% include 'header.html' %}
+
+{% block title %} HOME {% endblock %}
+
+{% block body %}
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="jumbotron p-3">
+                    <h2>Manage <b>Library</b> <button type="button" class="btn btn-success float-right" data-toggle="modal" data-target="#mymodal">Add New Book</button></h2>
+                    
+                    <table class="table table-hover table-dark">
+                        <tr>
+                            <th>ID</th>
+                            <th>Author</th>
+                            <th>Language</th>
+                            <th>Title</th>
+                            <th>Price (in Rs.)</th>
+                            <th>Action</th>
+                        </tr>
+                        <tr>
+                            <td>0</td>
+                            <td>Harsh Gupta</td>
+                            <td>Hindi</td>
+                            <td>IIT-KGP</td>
+                            <td>1000</td>
+                            <td>
+                                <a href="#" class="btn btn-warning btn-xs" data-toggle="modal" data-target="#modaledit">Edit</a>
+                                <a href="#" class="btn btn-danger btn-xs" onclick="return confirm('Are you Sure ?')">Delete</a>
+                            </td>
+                        </tr>
+                        <div class="modal fade" id="modaledit" role="dialog">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title">Update Information</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form action="" method="POST">
+                                            <div class="form-group">
+                                                <label>ID</label>
+                                                <input type="hidden" value="id" name="id">
+                                                <input type="text" class="form-control" name="id" value="0">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Author Name</label>
+                                                <input type="text" class="form-control" name="author" value="Patrick Bateman">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Language</label>
+                                                <input type="text" class="form-control" name="language" value="English">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Title</label>
+                                                <input type="text" class="form-control" name="title" value="American Psycho">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Price</label>
+                                                <input type="number" class="form-control" name="price" value="2000">
+                                            </div>
+                                            <div class="form-group">
+                                                <button class="btn btn-primary" type="submit">Update Book</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button class="bt-secondary btn" type="button" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                    </table>
+                    <div class="modal fade" id="mymodal" role="dialog">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title">Add Book</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <form action="" method="POST">
+                                        <div class="form-group">
+                                            <label>ID</label>
+                                            <input type="number" class="form-control" name="id" required="1">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Author Name</label>
+                                            <input type="text" class="form-control" name="author" required="1">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Language</label>
+                                            <input type="text" class="form-control" name="language" required="1">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Title</label>
+                                            <input type="text" class="form-control" name="title" required="1">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Price</label>
+                                            <input type="number" class="form-control" name="price" required="1">
+                                        </div>
+                                        <div class="form-group">
+                                            <button class="btn btn-primary" type="submit">Add Book</button>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button class="btn-secondary btn" type="button" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

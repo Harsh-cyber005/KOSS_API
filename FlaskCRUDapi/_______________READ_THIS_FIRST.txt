@@ -1,0 +1,9 @@
+This is where I tried to develop the front end of a database and API of a Library.
+
+I made this by including Bootstrap libraries.
+But with my limited JS knowledge, unfortunately i could not complete it
+
+I also got tremendous amounts of errors while writing the app.py code. I however debugged many of them with the help of Google,stackoverflow,github,etc , but could not go through one Error..........
+This is where i felt that i needed the support and guidance of a team and seniors to help me with such things.
+
+.................................END..............................................................
