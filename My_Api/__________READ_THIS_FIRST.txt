@@ -1,0 +1,4 @@
+Here, I had made several Flask based apis
+	First one is app.py - This app responds to GET, PUT, POST request methods based on the book_list provided to it in the code itself
+	Second one is Second_app.py - This app responds to GET, PUT, POST request methods based on a file provided in the same directory as this api --> This file is book.sqlite
+	Third one is Third_app.py - This app responds to GET, PUT, POST request methods based on a table in a database in the freesqldatabase.com that i had created.
